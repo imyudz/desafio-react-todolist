@@ -1,0 +1,48 @@
+.createTaskWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.createTaskWrapper button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: var(--font-large);
+    color: var(--gray-100);
+    font-size: var(--font-medium);
+    font-weight: 700;
+    line-height: var(--default-line-height);
+    background: var(--blue-dark);
+    border-radius: 8px;
+    border: none;
+}
+
+.createTaskWrapper button:hover {
+    background: var(--blue);
+}
+
+.createTaskWrapper button:focus {
+    box-shadow: 0 0 0 2px var(--blue-dark);
+}
+
+.createTaskWrapper input[type=text] {
+    width: 100%;
+    padding: var(--font-large);
+    color: var(--gray-300);
+    font-size: var(--font-large);
+    font-weight: 400;
+    line-height: var(--default-line-height);
+    border: 1px solid var(--gray-700);
+    border-radius: 8px;
+    background: var(--gray-500);
+}
+
+.createTaskWrapper input[type=text]:focus {
+    color: var(--gray-100);
+    border: 1px solid var(--purple-dark);
+}

@@ -10,7 +10,7 @@
 <div align="center">
 
 
-[![Deploy](https://img.shields.io/badge/Link_da_Aplicação-link_-blue)](https://your-deploy-link.com)
+[![Deploy](https://img.shields.io/badge/Link_da_Aplicação-link_-blue)](https://vercel.com/imyudzs-projects/desafio-react-todolist)
 
 </div>
 
@@ -31,8 +31,8 @@
 ## 📁 Acesso ao projeto
 Para acessar o projeto, você pode:
 
-1. Baixar o projeto clicando [aqui](https://github.com/seu-usuario/projeto.git)
-2. Acessar diretamente pelo link de público [aqui](https://your-deploy-link.com)
+1. Baixar o projeto clicando [aqui](https://github.com/imyudz/desafio-react-todolist.git)
+2. Acessar diretamente pelo link de público [aqui](https://vercel.com/imyudzs-projects/desafio-react-todolist)
 
 <br>
 

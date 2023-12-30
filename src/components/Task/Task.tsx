@@ -20,8 +20,8 @@ function Task({ taskInfo, onDeleteTask, onChangeTaskState }: TaskPropsInterface)
 
     return (
         <main className={styles.taskCard}>
-            <label className={styles.checkboxLabel} onClick={() => onChangeTaskState(taskInfo.id)}>
-                <input type="checkbox" name="taskStatus" checked={taskInfo.isCompleted}/>
+            <label className={styles.checkboxLabel}>
+                <input type="checkbox" name="taskStatus" checked={taskInfo.isCompleted} onClick={() => onChangeTaskState(taskInfo.id)}/>
                 <Check className={styles.checkIcon} size={12} />
             </label>
             <p className={paragraphStyle}>{taskInfo.title}</p>

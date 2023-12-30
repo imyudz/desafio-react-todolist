@@ -26,6 +26,7 @@ function AddTask({ onTaskCreate }: AddTaskPropsI) {
                 onChange={(e) => setTaskTitle(e.target.value)}
                 value={taskTitle}
                 required
+                maxLength={35}
             />
             <button onClick={sendTaskTitle}>
                 Criar

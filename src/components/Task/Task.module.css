@@ -21,6 +21,8 @@
         vertical-align: middle;
     }
 
+
+
     /* Estilos para o input do checkbox */
     .checkboxLabel input[type='checkbox'] {
         appearance: none;
@@ -48,6 +50,7 @@
         left: 50%;
         transform: translate(-50%, -65%);
         display: none;
+        pointer-events: none;
     }
 
     .taskCard input[type=checkbox]:checked {

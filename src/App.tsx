@@ -14,8 +14,6 @@ export interface TaskI {
 function App() {
   const [tasksList, setTasksList] = useState<TaskI[]>([]);
 
-  console.log(tasksList);
-
   const handleTaskCreate = (taskTitle: string) => {
     setTasksList([...tasksList, {
       id: crypto.randomUUID(),
@@ -29,12 +27,22 @@ function App() {
     setTasksList(filteredTasks);
   }
 
+  const handleTaskState = (taskId: string) => {
+    const updatedTaskList = tasksList.map(task => {
+      if (task.id == taskId) {
+        task.isCompleted = !task.isCompleted;
+      }
+      return task;
+    });
+    setTasksList(updatedTaskList);
+  };
+
   return (
     <main>
       <Header />
       <div className={styles.wrapper}>
         <AddTask onTaskCreate={handleTaskCreate} />
-        <ShowTasks taskList={tasksList} sendDeleteTask={handleTaskDelete}/>
+        <ShowTasks taskList={tasksList} sendDeleteTask={handleTaskDelete} sendTaskState={handleTaskState}/>
       </div>
     </main>
   )

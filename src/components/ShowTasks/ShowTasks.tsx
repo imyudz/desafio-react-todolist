@@ -6,11 +6,10 @@ import Empty from './Empty';
 interface ShowTasksPropsI {
     taskList: TaskI[];
     sendDeleteTask: (taskId: string) => void;
+    sendTaskState: (taskId: string) => void;
 }
 
-function ShowTasks({ taskList, sendDeleteTask }: ShowTasksPropsI) {
-
-    console.log(taskList);
+function ShowTasks({ taskList, sendDeleteTask, sendTaskState }: ShowTasksPropsI) {
 
     const handleDeleteTask = (taskId: string) => {
         sendDeleteTask(taskId);
@@ -40,7 +39,7 @@ function ShowTasks({ taskList, sendDeleteTask }: ShowTasksPropsI) {
                 taskList.length !== 0 ?
                     <div className={styles.tasksContainer}>
                         {
-                            taskList.map(task => <Task key={task.id} taskInfo={task} onDeleteTask={handleDeleteTask} />)
+                            taskList.map(task => <Task key={task.id} taskInfo={task} onDeleteTask={handleDeleteTask} onChangeTaskState={() => sendTaskState(task.id)} />)
                         }
                     </div>
                 : <Empty/>

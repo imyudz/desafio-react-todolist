@@ -44,7 +44,6 @@ function ShowTasks({ taskList, sendDeleteTask, sendTaskState }: ShowTasksPropsI)
                     </div>
                 : <Empty/>
             }
-            
         </div>
     );
 }

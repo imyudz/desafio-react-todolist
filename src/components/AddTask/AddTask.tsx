@@ -12,8 +12,10 @@ function AddTask({ onTaskCreate }: AddTaskPropsI) {
 
 
     function sendTaskTitle() {
-        taskTitle !== "" &&
+        if (taskTitle !== "") {
             onTaskCreate(taskTitle);
+            setTaskTitle("");
+        }
     }
     
     return (
@@ -22,6 +24,7 @@ function AddTask({ onTaskCreate }: AddTaskPropsI) {
                 type="text"
                 placeholder="Adicione uma nova tarefa"
                 onChange={(e) => setTaskTitle(e.target.value)}
+                value={taskTitle}
                 required
             />
             <button onClick={sendTaskTitle}>

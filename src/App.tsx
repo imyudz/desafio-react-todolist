@@ -22,14 +22,19 @@ function App() {
       title: taskTitle,
       isCompleted: false
     }]);
-  } 
+  }
+
+  const handleTaskDelete = (taskId: string) => {
+    const filteredTasks = tasksList.filter(task => task.id !== taskId);
+    setTasksList(filteredTasks);
+  }
 
   return (
     <main>
       <Header />
       <div className={styles.wrapper}>
         <AddTask onTaskCreate={handleTaskCreate} />
-        <ShowTasks/>
+        <ShowTasks taskList={tasksList} sendDeleteTask={handleTaskDelete}/>
       </div>
     </main>
   )

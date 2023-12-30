@@ -1,5 +1,5 @@
 import styles from './ShowTasks.module.css';
-import Clipboard from '../../assets/Clipboard.svg'
+import Task from '../Task/Task';
 
 function ShowTasks() {
     return (
@@ -12,12 +12,13 @@ function ShowTasks() {
                     <span className={styles.title}>Concluídas<span className={styles.counter}>2 de 5</span></span>
                 </div>
             </div>
-            <div className={styles.empty}>
-                <img src={Clipboard} alt="clipboard" width={56} height={56} />
-                <div className={styles.emptyText}>
-                    <p>Você ainda não tem tarefas cadastradas</p>
-                    <p className={styles.muted}>Crie tarefas e organize seus itens a fazer</p>
-                </div>
+
+            
+
+            <div className={styles.tasksContainer}>
+                <Task />
+                <Task />
+                <Task />
             </div>
         </div>
     );
